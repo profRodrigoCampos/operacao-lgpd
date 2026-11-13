@@ -1,0 +1,10 @@
+# Configurações locais de ferramentas
+.claude/
+.vscode/
+.idea/
+
+# Arquivos do sistema operacional / Google Drive
+Thumbs.db
+desktop.ini
+.DS_Store
+*.tmp

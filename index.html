@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Operação LGPD — Caso #0413</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;800&family=VT323&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <canvas id="chuva"></canvas>
+  <div class="fx-grid"></div>
+  <div class="fx-scan"></div>
+
+  <header class="topbar">
+    <div class="brand"><span class="blink">●</span> OPERAÇÃO&nbsp;LGPD <span class="dim">// CASO #0413</span></div>
+    <div class="top-actions" id="top-actions"></div>
+  </header>
+
+  <main>
+    <!-- ============ TELA INICIAL ============ -->
+    <section id="tela-inicio" class="tela ativa">
+      <div class="inicio-wrap">
+        <div class="logo">
+          <div class="dim small">// DIVISÃO DE CRIMES CONTRA DADOS PESSOAIS</div>
+          <h1 class="glitch" data-text="OPERAÇÃO LGPD">OPERAÇÃO LGPD</h1>
+          <p class="sub">Um jogo de investigação sobre a Lei Geral de Proteção de Dados</p>
+        </div>
+
+        <div class="terminal intro">
+          <div id="intro-terminal"></div>
+          <aside class="caso-ficha">
+            <div class="cf-titulo">▣ ARQUIVO DO CASO</div>
+            <dl>
+              <dt>caso</dt><dd>#0413</dd>
+              <dt>alvo</dt><dd>BauruByte Delivery</dd>
+              <dt>registros</dt><dd class="r">2.300.000</dd>
+              <dt>expostos</dt><dd>nome · CPF · endereço · pedidos · <span class="r">saúde ⚠</span></dd>
+              <dt>origem</dt><dd>fórum na dark web</dd>
+              <dt>status</dt><dd class="a"><span class="blink">●</span> EM INVESTIGAÇÃO</dd>
+            </dl>
+          </aside>
+        </div>
+
+        <form class="cadastro" id="form-cadastro" autocomplete="off">
+          <div class="agente a1">
+            <label for="nome1">AGENTE 01</label>
+            <input id="nome1" maxlength="20" placeholder="digite seu nome" required>
+          </div>
+          <div class="vs">VS</div>
+          <div class="agente a2">
+            <label for="nome2">AGENTE 02</label>
+            <input id="nome2" maxlength="20" placeholder="digite seu nome" required>
+          </div>
+          <button class="btn btn-primary btn-big" type="submit">&gt; INICIAR INVESTIGAÇÃO_</button>
+        </form>
+
+        <div class="inicio-links">
+          <button class="btn btn-ghost hidden" id="btn-continuar">⟳ Continuar a partida salva</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ DOSSIÊ ============ -->
+    <section id="tela-dossie" class="tela">
+      <div class="dossie-wrap">
+        <div class="dossie-head">
+          <div>
+            <div class="dim small">DOSSIÊ DO CASO // LEITURA OBRIGATÓRIA</div>
+            <h2 id="dossie-titulo"></h2>
+          </div>
+          <div class="dossie-count" id="dossie-count"></div>
+        </div>
+        <div class="progress"><div id="dossie-prog"></div></div>
+        <article class="ficha" id="dossie-ficha"></article>
+        <div class="dossie-nav">
+          <button class="btn btn-ghost" id="dossie-prev">&lt; anterior</button>
+          <button class="btn btn-primary" id="dossie-next">próxima ficha &gt;</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ JOGO ============ -->
+    <section id="tela-jogo" class="tela">
+      <div class="jogo-wrap">
+        <aside class="painel-jogador" id="painel-0"></aside>
+
+        <div class="centro">
+          <div class="tabuleiro" id="tabuleiro"></div>
+          <div class="legenda" id="legenda"></div>
+        </div>
+
+        <aside class="painel-jogador" id="painel-1"></aside>
+
+        <div class="controle">
+          <div class="vez" id="vez"></div>
+          <div class="dado-area">
+            <div class="dado" id="dado">?</div>
+            <button class="btn btn-primary btn-big" id="btn-dado">ROLAR DADO</button>
+          </div>
+          <div class="log" id="log"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FIM ============ -->
+    <section id="tela-fim" class="tela">
+      <div class="fim-wrap" id="fim-wrap"></div>
+    </section>
+  </main>
+
+  <!-- Modal geral -->
+  <div class="modal-bg" id="modal"><div class="modal-box" id="modal-box"></div></div>
+
+  <!-- Manual do Detetive -->
+  <div class="modal-bg manual-bg" id="manual">
+    <div class="modal-box manual-box">
+      <div class="manual-head">
+        <div><span class="dim small">CONSULTA LIVRE // ATENÇÃO: O TEMPO CONTINUA CORRENDO!</span><h3>📖 MANUAL DO DETETIVE</h3></div>
+        <div class="manual-timer" id="manual-timer"></div>
+        <button class="btn btn-ghost" id="manual-fechar">✕ fechar</button>
+      </div>
+      <div class="manual-body">
+        <nav class="manual-nav" id="manual-nav"></nav>
+        <article class="ficha manual-ficha" id="manual-ficha"></article>
+      </div>
+    </div>
+  </div>
+
+  <!-- Camada de efeitos visuais -->
+  <div id="fx-layer"></div>
+
+  <script src="js/conteudo.js"></script>
+  <script src="js/efeitos.js"></script>
+  <script src="js/jogo.js"></script>
+</body>
+</html>
