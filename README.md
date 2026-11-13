@@ -9,19 +9,25 @@ Dois alunos, um computador, um vazamento de 2,3 milhões de cadastros para inves
 ![Sem instalação](https://img.shields.io/badge/instala%C3%A7%C3%A3o-nenhuma-ff3dcf)
 ![Idioma](https://img.shields.io/badge/idioma-portugu%C3%AAs-ffb627)
 
+## 🎮 [▶ JOGAR AGORA](https://profrodrigocampos.github.io/operacao-lgpd/)
+
+**https://profrodrigocampos.github.io/operacao-lgpd/**: abre direto no navegador, sem baixar nada.
+
 ![Tabuleiro do jogo](docs/prints/03-tabuleiro.png)
 
 ---
 
 ## ⚡ Comece em 30 segundos
 
+**Opção 1: online.** Acesse o link acima e pronto.
+
+**Opção 2: offline, sem internet no laboratório.**
+
 1. Clique no botão verde **`<> Code` → `Download ZIP`** aqui no GitHub.
 2. Descompacte a pasta.
 3. Dê dois cliques no arquivo **`index.html`**.
 
-Pronto: o jogo abre no navegador. **Não precisa instalar nada, nem de servidor ou banco de dados.** A internet é usada só para carregar as fontes; sem ela, o jogo funciona com fontes padrão.
-
-> 💡 **Quer um link para mandar aos alunos?** Ative o GitHub Pages (instruções [mais abaixo](#-publicar-como-site-github-pages)) e o jogo fica online, com endereço próprio.
+**Não precisa instalar nada, nem de servidor ou banco de dados.** A internet é usada só para carregar as fontes; sem ela, o jogo funciona com fontes padrão.
 
 ---
 
@@ -126,9 +132,11 @@ As alternativas são **embaralhadas** na tela automaticamente.
 
 ---
 
-## 🌐 Publicar como site (GitHub Pages)
+## 🌐 Publicar a sua versão como site (GitHub Pages)
 
-1. No repositório, vá em **Settings → Pages**.
+Fez um fork e adaptou as perguntas? Publique a sua versão:
+
+1. No seu repositório, vá em **Settings → Pages**.
 2. Em **Branch**, escolha `main` e a pasta `/ (root)` e clique em **Save**.
 3. Em 1 ou 2 minutos, o jogo estará em `https://SEU-USUARIO.github.io/NOME-DO-REPOSITORIO/`.
 
